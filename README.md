@@ -41,4 +41,4 @@ You can view free day data, free night data, free total data, used day data, use
 
 ## Disclaimer
 
-I developed this extension because I am too lazy to calculate everything in my mind. This extension is not changing, or collecting any personal data, and it is not doing anything with the website data itself. In this extension, it just do some calculations with the provided data **(xGB Used of yGB)** and show it in the client-side. This extension has no affiliation with SLT itself. The images I have used here are used in compliance with the fair use and the original authors of the web site reserves their copyright.
+I developed this extension because I am too lazy to calculate everything in my mind. This extension is not changing, or collecting any personal data, and it is not doing anything with the website data itself. In this extension, it just do some calculations with the provided data **(xGB Used of yGB)** and show it in the client-side. This extension has no affiliation with SLT itself. The images I have used here are used in compliance with the fair use and the original authors of the web site reserve their copyright.
