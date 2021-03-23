@@ -75,12 +75,21 @@ const main = () => {
   }
 };
 
+const re_run = () => {
+  let list = document.getElementsByClassName("sc-dnqmqq");
+  if (list.length === 17) {
+    observer.observe(document, {
+      childList: true,
+      subtree: true,
+    });
+  }
+};
+
 const observer = new MutationObserver((mutations, mutiationInstance) => {
   let list = document.getElementsByClassName("sc-dnqmqq jZsdgY");
   if (list.length === 2) {
     main();
     mutiationInstance.disconnect();
-    return;
   }
 });
 
@@ -88,3 +97,5 @@ observer.observe(document, {
   childList: true,
   subtree: true,
 });
+
+window.addEventListener("click", re_run);
