@@ -77,7 +77,8 @@ const main = () => {
 
 const re_run = () => {
   let list = document.getElementsByClassName("sc-dnqmqq");
-  if (list.length === 17) {
+
+  if (list.length === 17 || list.length === 2) {
     observer.observe(document, {
       childList: true,
       subtree: true,
