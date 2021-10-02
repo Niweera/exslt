@@ -1,3 +1,5 @@
+## THIS PACKAGE IS NOT MAINTAINED ANYMORE!
+
 # exSLT
 
 ## A simple browser extension to view useful information on the SLT usage meter web page.
