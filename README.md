@@ -17,6 +17,7 @@ https://github.com/Niweera/exslt/releases
 
 ![image](https://cdn.discordapp.com/attachments/696241860582309911/735128547340976199/unknown.png)
 
+
 3. Click Load unpacked.
 
 ![image](https://cdn.discordapp.com/attachments/696241860582309911/735128592480206858/unknown.png)
@@ -31,7 +32,7 @@ https://github.com/Niweera/exslt/releases
 
 You need to do the calculations and see how much GBs are left.
 
-![image](https://i.imgur.com/dqYvbGt.jpg)
+![image](https://user-images.githubusercontent.com/25348766/176349777-a8962941-aba9-4796-8d52-18d34191acc2.png)
 
 ### After extension
 
