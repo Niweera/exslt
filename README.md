@@ -6,7 +6,7 @@
 
 #### How to install this extension
 
-Download the latest release from the following link. Then unzip the file `exslt.zip`.
+Download the latest release from the following [link](https://github.com/Niweera/exslt/releases/latest/download/exslt.zip). Then unzip the file `exslt.zip`.
 
 https://github.com/Niweera/exslt/releases
 
