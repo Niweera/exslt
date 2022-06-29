@@ -38,7 +38,7 @@ You need to do the calculations and see how much GBs are left.
 
 You can view free day data, free night data, free total data, used day data, used night data, used total data, free day quota (you can see how much data you can use for each day, if you don't want to get any extra GBs. 😉), free night quota and free total quota.
 
-![image](https://i.imgur.com/Q6HJM3O.jpg)
+![image](https://user-images.githubusercontent.com/25348766/176380614-d487e031-0586-48ba-9a2c-24be99678f8a.png)
 
 ## Disclaimer
 

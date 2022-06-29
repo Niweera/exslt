@@ -1,23 +1,17 @@
-const main = () => {
+const main = (div) => {
   try {
-    let list = document.getElementsByClassName("sc-dnqmqq jZsdgY");
-    const data = [];
-    for (let item of list) {
-      data.push(item.innerText);
-    }
-
     const peak_usage = parseFloat(
-      data[0].split(" Used of ")[0].replace("GB", "")
+      div[0].innerText.split(" USED OF ")[0].replace("GB", "")
     );
     const total_peak_data = parseFloat(
-      data[0].split(" Used of ")[1].replace("GB", "")
+      div[0].innerText.split(" USED OF ")[1].replace("GB", "")
     );
 
     const total_usage = parseFloat(
-      data[1].split(" Used of ")[0].replace("GB", "")
+      div[1].innerText.split(" USED OF ")[0].replace("GB", "")
     );
     const total_data = parseFloat(
-      data[1].split(" Used of ")[1].replace("GB", "")
+      div[1].innerText.split(" USED OF ")[1].replace("GB", "")
     );
 
     const days_of_current_month = new Date(
@@ -37,48 +31,33 @@ const main = () => {
     const free_night_data_quota = (free_night_data / days_left).toFixed(1);
     const free_total_data_quota = (free_total_data / days_left).toFixed(1);
 
-    list[0].innerText = `
-    ${list[0].innerText}
+    div[0].innerText = `
+    ${div[0].innerText} \n ${div[1].innerText}
 
-    Free day data: 
-    Free night data: 
-    Free total data: 
-    
-    Used day data: 
-    Used night data: 
-    Used total data: 
-    
-    Free day quota: 
-    Free night quota: 
-    Free total quota: 
-    `;
-
-    list[1].innerText = `
-     ${list[1].innerText}
-
-     ${free_day_data} GB of ${total_peak_data} GB
-     ${free_night_data} GB of ${(total_data - total_peak_data).toFixed(1)} GB
-     ${free_total_data} GB of ${total_data} GB
-    
-     ${peak_usage} GB of ${total_peak_data} GB
-     ${(total_usage - peak_usage).toFixed(1)} of ${(
+    Free day data: ----> ${free_day_data} GB of ${total_peak_data} GB
+    Free night data: ----> ${free_night_data} GB of ${(
       total_data - total_peak_data
     ).toFixed(1)} GB
-     ${total_usage} GB of ${total_data} GB
+    Free total data: ----> ${free_total_data} GB of ${total_data} GB
     
-     ${free_day_data_quota} GB
-     ${free_night_data_quota} GB
-     ${free_total_data_quota} GB
-     `;
+    Used day data: ----> ${peak_usage} GB of ${total_peak_data} GB
+    Used night data: ----> ${(total_usage - peak_usage).toFixed(1)} of ${(
+      total_data - total_peak_data
+    ).toFixed(1)} GB
+    Used total data: ----> ${total_usage} GB of ${total_data} GB
+    
+    Free day quota: ----> ${free_day_data_quota} GB
+    Free night quota: ----> ${free_night_data_quota} GB
+    Free total quota: ----> ${free_total_data_quota} GB
+    `;
   } catch (err) {
-    console.log(err.message);
+    console.log(err);
   }
 };
 
 const re_run = () => {
-  let list = document.getElementsByClassName("sc-dnqmqq");
-
-  if (list.length === 17 || list.length === 2) {
+  let div = document.getElementsByClassName("used-of");
+  if (div.length === 2) {
     observer.observe(document, {
       childList: true,
       subtree: true,
@@ -87,9 +66,11 @@ const re_run = () => {
 };
 
 const observer = new MutationObserver((mutations, mutiationInstance) => {
-  let list = document.getElementsByClassName("sc-dnqmqq jZsdgY");
-  if (list.length === 2) {
-    main();
+  let div = document.getElementsByClassName("used-of");
+  let name = document.getElementsByClassName("name");
+
+  if (div.length === 2 && name[0]?.innerText === "Standard") {
+    main(div);
     mutiationInstance.disconnect();
   }
 });
