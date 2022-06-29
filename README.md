@@ -1,8 +1,6 @@
-## THIS PACKAGE IS NOT MAINTAINED ANYMORE!
-
 # exSLT
 
-## A simple browser extension to view useful information on the SLT usage meter web page.
+## A simple browser extension to view useful information on the [SLT usage meter](https://myslt.slt.lk/boardBand/summary) web page.
 
 ### This is a Google Chrome extension, and I have only tested it for my Chrome browser. If it doesn't work for your Chrome browser, open a new issue.
 
